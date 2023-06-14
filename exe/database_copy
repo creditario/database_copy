@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "database_copy"
+
+DatabaseCopy::ImportUI.start(":spinner ")
+
+if ARGV.size != 2
+  DatabaseCopy::ImportUI.error("Needs to arguments: source database URL and target database URL")
+  return
+end
+
+DatabaseCopy::ImportUI.warn("BEWARE this script might destroy target database. make sure you have the right params source and target.")
+DatabaseCopy::ImportUI.warn("SOURCE #{ARGV[0]}")
+DatabaseCopy::ImportUI.warn("TARGET #{ARGV[1]}")
+
+puts ""
+DatabaseCopy::ImportUI.warn("If you want to stop this program execution press CTRL+C right now! or press ENTER to continue.")
+
+$stdin.gets.chomp
+
+copier = DatabaseCopy::Executor.new(source_db: ARGV[0], target_db: ARGV[1])
+copier.copy_database
+
+DatabaseCopy::ImportUI.finish("Copy is done. Now create a PG Dump of target.")

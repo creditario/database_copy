@@ -33,6 +33,8 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "pg", "~> 1.5", ">= 1.5.3"
+  spec.add_dependency "tty-spinner", "~> 0.9.3"
+  spec.add_dependency "pastel", "~> 0.8.0"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

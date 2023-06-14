@@ -2,7 +2,9 @@ PATH
   remote: .
   specs:
     database_copy (0.1.0)
+      pastel (~> 0.8.0)
       pg (~> 1.5, >= 1.5.3)
+      tty-spinner (~> 0.9.3)
 
 GEM
   remote: https://rubygems.org/
@@ -16,6 +18,8 @@ GEM
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
+    pastel (0.8.0)
+      tty-color (~> 0.5)
     pg (1.5.3)
     racc (1.7.1)
     rainbow (3.1.1)
@@ -49,6 +53,10 @@ GEM
     standard-performance (1.1.0)
       lint_roller (~> 1.0)
       rubocop-performance (~> 1.18.0)
+    tty-color (0.6.0)
+    tty-cursor (0.7.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
     unicode-display_width (2.4.2)
 
 PLATFORMS
