@@ -1,24 +1,22 @@
-# DatabaseCopy
+# Database Copy
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/database_copy`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem simplifies the process of database migration or replication by providing a straightforward interface to copy tables and their data, while allowing fine-grained control over the selection of tables and attributes.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add database_copy
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install database_copy
 
 ## Usage
 
-TODO: Write usage instructions here
+After gem is installed copy a source database to a target. Provide the two params, source and target, as database URL.
+
+    $ database_copy postgres://source postgres://target
 
 ## Development
 
@@ -28,12 +26,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/database_copy. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/database_copy/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/creditario/database_copy. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/database_copy/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](https://github.com/creditario/database_copy/blob/main/LICENSE.txt).
 
 ## Code of Conduct
 
-Everyone interacting in the DatabaseCopy project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/database_copy/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the DatabaseCopy project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/creditario/database_copy/blob/main/CODE_OF_CONDUCT.md).
